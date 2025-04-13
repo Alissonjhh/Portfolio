@@ -8,14 +8,14 @@ const temaSalvo = localStorage.getItem("tema");
 if (temaSalvo === "dark") {
   body.classList.add("dark-mode");
   icone.src = "./Img/Sol.png";
-  iconeGit.src = "./img/github-Light.png";
-  iconeLink.src = "./img/linkedin-Light.png";
-  iconeInta.src = "./img/instagram-Light.png";
+  iconeGit.src = "./Img/github-Light.png";
+  iconeLink.src = "./Img/linkedin-Light.png";
+  iconeInta.src = "./Img/instagram-Light.png";
 } else {
     icone.src = "./Img/Lua.png"; 
-    iconeGit.src = "./img/github-Dark.png";
-    iconeLink.src = "./img/linkedin-Dark.png";
-    iconeInta.src = "./img/instagram-Dark.png";
+    iconeGit.src = "./Img/github-Dark.png";
+    iconeLink.src = "./Img/linkedin-Dark.png";
+    iconeInta.src = "./Img/instagram-Dark.png";
 }
 
 icone.addEventListener("click", () => {
@@ -23,15 +23,15 @@ icone.addEventListener("click", () => {
 
   if (body.classList.contains("dark-mode")) {
     icone.src = "./Img/Sol.png";
-    iconeGit.src = "./img/github-Light.png";
-    iconeLink.src = "./img/linkedin-Light.png";
-    iconeInta.src = "./img/instagram-Light.png";
+    iconeGit.src = "./Img/github-Light.png";
+    iconeLink.src = "./Img/linkedin-Light.png";
+    iconeInta.src = "./Img/instagram-Light.png";
     localStorage.setItem("tema", "dark");
   } else {
     icone.src = "./Img/Lua.png";
-    iconeGit.src = "./img/github-Dark.png";
-    iconeLink.src = "./img/linkedin-Dark.png";
-    iconeInta.src = "./img/instagram-Dark.png";
+    iconeGit.src = "./Img/github-Dark.png";
+    iconeLink.src = "./Img/linkedin-Dark.png";
+    iconeInta.src = "./Img/instagram-Dark.png";
     localStorage.setItem("tema", "light");
   }
 });
