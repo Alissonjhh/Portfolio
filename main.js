@@ -7,7 +7,7 @@ const temaSalvo = localStorage.getItem("tema");
 
 if (temaSalvo === "dark") {
   body.classList.add("dark-mode");
-  icone.src = "img/Sol.png";
+  icone.src = "https://alissonjhh.github.io/Portfolio/img/Sol.png";
   iconeGit.src = "img/github Light.png";
   iconeLink.src = "img/linkedin Light.png";
   iconeInta.src = "img/instagram Light.png";
