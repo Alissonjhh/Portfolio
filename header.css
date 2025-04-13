@@ -86,9 +86,3 @@ nav a:hover {
     width: auto;
     height: auto;
 }
-
-@media screen and (max-width: 600px) {
-    .Foto-Perfil {
-        
-    }
-}
