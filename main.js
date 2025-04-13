@@ -7,7 +7,7 @@ const temaSalvo = localStorage.getItem("tema");
 
 if (temaSalvo === "dark") {
   body.classList.add("dark-mode");
-  icone.src = "/Portfolio/img/Sol.png";
+  icone.src = "./img/Sol.png";
   iconeGit.src = "./img/github-Light.png";
   iconeLink.src = "./img/linkedin-Light.png";
   iconeInta.src = "./img/instagram-Light.png";
@@ -22,7 +22,7 @@ icone.addEventListener("click", () => {
   body.classList.toggle("dark-mode");
 
   if (body.classList.contains("dark-mode")) {
-    icone.src = "/Portfolio/img/Sol.png";
+    icone.src = "./img/Sol.png";
     iconeGit.src = "./img/github-Light.png";
     iconeLink.src = "./img/linkedin-Light.png";
     iconeInta.src = "./img/instagram-Light.png";
