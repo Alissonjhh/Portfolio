@@ -6,37 +6,38 @@ html, body {
 }
 
 main {
-    flex: 1; /* Permite que o main cresça para ocupar o espaço entre o header e o footer */
-    padding: 20px; /* Adiciona espaçamento interno para o conteúdo */
+    flex: 1;
+    padding: 20px;
 }
 
 .Apresentaçao {
     font-size: 1.5rem;
-    padding-left: 15rem;
-    padding-top: 8rem;    
+    padding-left: 5%;
+    padding-top: 8rem;
+    text-align: center;
 }
 
 .Apresentaçaoh1 {
     padding-top: 0.2rem;
-    padding-left: 12rem;
+    padding-left: 5%;
     font-size: 2rem;
+    text-align: center;
+
 }
 
 .Apresentaçaoh3 {
-    padding-left: 13.5rem;
-    font-size: 1.0rem;
+    padding-left: 5%;
+    font-size: 1rem;
     padding-top: 0.2rem;
-    
+    text-align: center;
+
 }
 
 .Sobre-Section {
     margin-top: 5rem;
-    padding-left: 20px;
-    padding-top: 1rem;
+    padding: 2rem;
     border: 2px solid black;
     border-radius: 10px;
-    padding-bottom: 11rem;
-    padding-left: 5rem;
     font-family: "Roboto", sans-serif;
 }
 
@@ -49,33 +50,144 @@ body.dark-mode .Sobre-Section {
     font-size: 2rem;
 }
 
-.redes-sociais1 img {
-    width: 2.5rem;
+.redes-sociais1 {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 2rem 5%;
+    margin-left: 2rem;
+    justify-content: center;
 }
 
-.redes-sociais1 {
-    padding-left: 13.8rem;
-    gap: 20px;
-
+.redes-sociais1 img {
+    width: 2.5rem;
 }
 
 .Projetos-Section h1 {
     font-size: 2rem;
     display: flex;
     justify-content: center;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-
+    padding: 2rem 0;
 }
 
 .Textos {
+    margin-bottom: 2rem;
     display: inline;
     font-weight: 600;
 }
 
 .All-Icons {
-    position: absolute;
-    margin-left: 15.3rem;
-    margin-bottom: 2.7rem;
+    display: flex;
     gap: 10px;
+    margin: 2rem 5%;
+    margin-bottom: 7rem;
+}
+
+/* Tablet (até 768px) */
+@media (max-width: 768px) {
+    .Apresentaçao,
+    .Apresentaçaoh1,
+    .Apresentaçaoh3 {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        text-align: left;
+        text-align: center;
+    }
+
+    .Apresentaçaoh1 {
+        font-size: 1.5rem;
+    }
+
+    .Apresentaçaoh3 {
+        font-size: 0.9rem;
+    }
+
+    .Sobre-Section {
+        padding: 1.5rem;
+        margin-top: 3rem;
+    }
+
+    .Sobre-Section h2 {
+        font-size: 1.5rem;
+    }
+
+    .redes-sociais1 {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        padding: 1rem 2rem;
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    .All-Icons {
+        flex-wrap: wrap;
+        margin: 1rem 2rem;
+    }
+
+    .Projetos-Section h1 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Celulares pequenos (até 480px, incluindo iPhone SE) */
+@media (max-width: 480px) {
+    * {
+        font-size: 18px;
+    }
+
+    .Apresentaçao {
+        font-size: 1.1rem;
+        padding-top: 2rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        text-align: center;
+    }
+
+    .Apresentaçaoh1 {
+        font-size: 1.4rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        text-align: center;
+
+    }
+
+    .Apresentaçaoh3 {
+        font-size: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        text-align: center;
+
+    }
+
+    .Sobre-Section {
+        padding: 1rem;
+        margin-top: 2rem;
+    }
+
+    .Sobre-Section h2 {
+        font-size: 1.2rem;
+    }
+
+    .redes-sociais1 {
+        padding: 1rem;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    .redes-sociais1 img {
+        width: 2rem;
+    }
+
+    .Projetos-Section h1 {
+        font-size: 1.3rem;
+        padding: 1rem 0;
+        text-align: center;
+    }
+
+    .All-Icons {
+        margin: 1rem;
+        flex-wrap: wrap;
+    }
 }
