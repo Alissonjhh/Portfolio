@@ -6,21 +6,25 @@ html, body {
 }
 
 footer {
-    margin-top: auto; /* Empurra o footer para o final */
+    margin-top: auto;
     display: flex;
+    flex-wrap: wrap; /* permite quebra em telas pequenas */
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 20px 5%;
     background-color: #c6bfbf;
     border-top: 1px solid black;
+    gap: 2rem;
 }
 
 .Contato-Section {
-    margin-right: 8rem;
+    flex: 1;
+    max-width: 500px;
 }
 
 .Lado-Footer {
-    margin-left: 4rem;
+    flex: 1;
+    max-width: 500px;
 }
 
 .Contato {
@@ -35,13 +39,34 @@ footer {
     text-align: center;
 }
 
-form button:active {
-    opacity: 0.5;
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
 }
 
-form button:hover {
+form input {
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
+    border: white solid;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
 
+form textarea {
+    padding: 18px;
+    padding-bottom: 2rem;
+    width: 100%;
+    max-width: 400px;
+    resize: vertical;
+    border-radius: 20px;
+    border: white solid;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
 }
 
 div button {
@@ -53,8 +78,35 @@ div button {
     cursor: pointer;
 }
 
+form button:hover {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+form button:active {
+    opacity: 0.5;
+}
+
 div p {
     padding-top: 10px;
+}
+
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.redes-sociais img {
+    width: 3.5rem;
+}
+
+footer p {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1rem;
 }
 
 body.dark-mode footer {
@@ -62,45 +114,44 @@ body.dark-mode footer {
     color: #000000;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;    
+/* 📱 Responsividade para telas menores */
+@media (max-width: 768px) {
+    .Contato {
+        font-size: 1.5rem;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .Contato-Section,
+    .Lado-Footer {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    form input,
+    form textarea {
+        max-width: 100%;
+    }
+
+    .redes-sociais img {
+        width: 2.5rem;
+    }
 }
 
-form input {
-    padding: 10px;
-    border-radius: 20px;
-    border: white solid;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-}
+@media (max-width: 480px) {
+    .Contato {
+        font-size: 1.2rem;
+    }
 
+    form input,
+    form textarea {
+        font-size: 0.9rem;
+    }
 
-form textarea {
-    padding: 18px;
-    padding-bottom: 2rem;
-    width: 100%;
-    resize: vertical;
-    border-radius: 20px;
-    border: rgb(255, 255, 255) solid;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-    box-sizing: border-box;
-}
-
-.redes-sociais img {
-    width: 3.5rem;
-}
-
-.redes-sociais {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-
-}
-
-footer p {
-    display: flex;
-    justify-content: center;
+    .redes-sociais img {
+        width: 2rem;
+    }
 }
